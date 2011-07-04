@@ -25,8 +25,8 @@ HOST_GLOBAL_LDFLAGS += -m32
 
 # Use the Mac OSX SDK 10.5 if the build host is 10.6
 build_mac_version := $(shell sw_vers -productVersion)
-ifneq ($(filter 10.6.%, $(build_mac_version)),)
-sdk_105_root := /Developer/SDKs/MacOSX10.5.sdk
+ifneq ($(filter 10.5.%, $(build_mac_version)),)
+sdk_105_root := /Developer/SDKs/MacOSX10.6.sdk
 ifeq ($(wildcard $(sdk_105_root)),)
 $(warning *****************************************************)
 $(warning * You are building on Mac OSX 10.6.)
